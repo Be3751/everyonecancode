@@ -87,6 +87,7 @@ async def unicorn_exception_handler(request: Request, exc: KeyError):
     raise exc
 
 
+
 @app.exception_handler(ValueError)
 async def unicorn_exception_handler(request: Request, exc: KeyError):
     if exc.args[0] == "Connection string is either blank or malformed.":
